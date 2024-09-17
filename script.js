@@ -3,7 +3,11 @@ const startButton = document.querySelector('#start');
 
 startButton.addEventListener('click', () => {
     let userInput = prompt('Enter the number of squares');
-    createSquare(userInput);
+    if (userInput >100) {
+        alert('Too many squares');
+    } else {
+        createSquare(userInput);
+    }
 });
 
 function createSquare(userInput) {
